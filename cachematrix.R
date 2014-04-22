@@ -2,6 +2,12 @@
 ## functions do
 
 ## Write a short comment describing this function
+## implements new object which can cache calculated
+## inverse of a matrix. Once calculated the inverse is
+## kept in memory and might be used at any moment without
+## new calculation.
+
+## for non-square matrices we will use ginv function to get inverse
 library(MASS)
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -39,4 +45,3 @@ cacheSolve <- function(x, ...) {
     x$setinverse(i)
     i
 }
-## test string
